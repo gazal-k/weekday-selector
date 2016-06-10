@@ -50,7 +50,6 @@ Polymer({
           value.push(me._weekDays[i].i);
         }
       }
-      console.log(value);
       me.set('value', value);
     }, 50);
   }
