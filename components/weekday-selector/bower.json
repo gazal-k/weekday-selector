@@ -1,0 +1,29 @@
+{
+  "name": "weekday-selector",
+  "version": "0.0.1",
+  "description": "A weekday selector",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "weekday"
+  ],
+  "main": "weekday-selector.html",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/",
+    "/src/",
+    "/gulpfile.js",
+    "/package.json"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "paper-checkbox": "PolymerElements/paper-checkbox#~1.2.0",
+    "moment-element": "bendavis78/moment-element#master"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  }
+}
