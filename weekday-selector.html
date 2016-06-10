@@ -1,0 +1,37 @@
+<link rel="import" href="../paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../moment-element/moment-with-locales-import.html">
+<!--
+A weekday selector
+
+Example:
+
+    <weekday-selector value="{{ value }}"></weekday-selector>
+
+### Styling
+
+The following custom properties and mixins are also available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--weekday-selector` | Mixin applied to element  | {}
+`--weekday-selector-checkbox` | Mixin applied to checkboxes | {}
+
+@demo demo/index.html
+-->
+<dom-module id="weekday-selector">
+  <style is="custom-style">
+    :host {
+      @apply(--weekday-selector);
+    }
+
+    paper-checkbox {
+      @apply(--weekday-selector-checkbox);
+    }
+  </style>
+  <template>
+    <template is="dom-repeat" items="[[ _weekDays ]]" as="weekDay">
+      <paper-checkbox checked="{{ weekDay.checked }}" on-iron-change="_setValue">[[ weekDay.label ]]</paper-checkbox>
+    </template>
+  </template>
+  <script src="weekday-selector.js"></script>
+</dom-module>
